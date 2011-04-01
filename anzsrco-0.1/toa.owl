@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="">
+    <dc:source rdf:resource="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C"/>
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <cc:morePermissions rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <dc:rights>The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.</dc:rights>
+    <rdfs:label>TOA 1993 Ontology</rdfs:label>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/au/"/>
+    <dc:creator>Griffith University</dc:creator>
+    <dc:creator>University of Southern Queensland</dc:creator>
+    <dc:date>2011-04-01</dc:date>
+    <rdfs:comment>An ontology that provides classes codes and hierarchical information about ASRC/ANZSRC Type of Activity definitions.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ExperimentalDevelopment">
+    <rdfs:label>Experimental development</rdfs:label>
+    <rdfs:comment>Experimental development is systematic work, using existing knowledge gained from research or practical experience, that is directed to producing new materials, products or devices, to installing new processes, systems and services, or to improving substantially those already produced or installed.</rdfs:comment>
+    <rdf:type rdf:resource="TOA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="PureBasicResearch">
+    <rdfs:label>Pure basic research</rdfs:label>
+    <rdfs:comment>Pure basic research is experimental and theoretical work undertaken to acquire new knowledge without looking for long term benefits other than the advancement of knowledge.</rdfs:comment>
+    <rdf:type rdf:resource="TOA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="TOA">
+    <rdfs:label>TOA 1993 Definition</rdfs:label>
+    <rdfs:comment>Instances of this class describe TOA definitions</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AppliedResearch">
+    <rdfs:label>Applied research</rdfs:label>
+    <rdfs:comment>Applied research is original work undertaken primarily to acquire new knowledge with a specific application in view. It is undertaken either to determine possible uses for the findings of basic research or to determine new ways of achieving some specific and predetermined objectives.</rdfs:comment>
+    <rdf:type rdf:resource="TOA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="StrategicBasicResearch">
+    <rdfs:label>Strategic basic research</rdfs:label>
+    <rdfs:comment>Strategic basic research is experimental and theoretical work undertaken to acquire new knowledge directed into specified broad areas in the expectation of useful discoveries. It provides the broad base of knowledge necessary for the solution of recognised practical problems.</rdfs:comment>
+    <rdf:type rdf:resource="TOA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+</rdf:RDF>
