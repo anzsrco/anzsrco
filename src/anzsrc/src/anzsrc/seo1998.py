@@ -1,7 +1,8 @@
 import csv
 from rdflib import Graph, Literal
-from anzsrc import (SEO98, SKOS, RDF, OWL, RDFS, ANZSRC,
-                    ontoannot, createNode, add_anzsrc_code_prop)
+from anzsrc import (SEO98, SKOS, RDF, OWL, RDFS, ANZSRC, DC,
+                    ontoannot, ontoversion,
+                    createNode, add_anzsrc_code_prop)
 
 ######################################################
 # Static data not reflected in csv files
@@ -43,6 +44,7 @@ def genseo98():
             u"products, health, education and other social and environmental "
             u"aspects of particular interest.", lang=u"en")))
     ontoannot(g, SEO98)
+    ontoversion(g, SEO98)
 
     g.add((SEO98.SEO, RDF.type, OWL.Class))
     g.add((SEO98.SEO, RDFS.subClassOf, SKOS.Concept))

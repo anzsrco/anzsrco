@@ -28,6 +28,18 @@ ABSANZSRC08 = URIRef(u"http://www.abs.gov.au/AUSSTATS/abs@.nsf/"
 ABSANZSRC = URIRef(u'http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0')
 
 
+def ontoversion(g, ns):
+    # dcterms:hasVersion ponits to another version of the same thing.
+    # owl:versionInfo is an annotation property. (might be used to describe
+    # changes)
+    g.add((ns, OWL.versionInfo, Literal(ns + u'/0.2')))
+    g.add((ns, OWL.priorVersion, Literal(ns + u'/0.1')))
+    # g.add((ns, DCTERMS.hasVersion, ns + u'/0.2'))
+    # duplicate the node ns with correct versioned URI
+    for (s, p, o) in g.triples((ns, None, None)):
+        g.add((ns + u'/0.2', p, o))
+
+
 def ontoannot(g, ns):
     """
     add dc annotations to ontology.

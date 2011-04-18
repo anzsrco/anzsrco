@@ -1,5 +1,6 @@
 from rdflib import Graph, Literal
-from anzsrc import TOA, RDF, OWL, RDFS, SKOS, VIVO, ontoannot
+from anzsrc import (TOA, RDF, OWL, RDFS, SKOS, VIVO, DC,
+                    ontoannot, ontoversion)
 
 
 def gentoa():
@@ -15,6 +16,7 @@ def gentoa():
                                     u"Research Classification (ANZSRC): "
                                     u"Type of Activity.", lang=u"en")))
     ontoannot(g, TOA)
+    ontoversion(g, TOA)
 
     # a class for TOA
     g.add((TOA.TOA, RDF.type, OWL.Class))

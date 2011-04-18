@@ -1,7 +1,8 @@
 import csv
 from rdflib import Graph, Literal
-from anzsrc import (RFCD, SKOS, RDF, OWL, RDFS, ANZSRC,
-                    ontoannot, createNode, add_anzsrc_code_prop)
+from anzsrc import (RFCD, SKOS, RDF, OWL, RDFS, ANZSRC, DC,
+                    ontoannot, ontoversion,
+                    createNode, add_anzsrc_code_prop)
 
 
 def genrfcd():
@@ -40,6 +41,7 @@ def genrfcd():
             u" by national research institutions and organisations, and "
             u"emerging areas of study.", lang="en")))
     ontoannot(g, RFCD)
+    ontoversion(g, RFCD)
 
     g.add((RFCD.RFCD, RDF.type, OWL.Class))
     g.add((RFCD.RFCD, RDFS.subClassOf, SKOS.Concept))

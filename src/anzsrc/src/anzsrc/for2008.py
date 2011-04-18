@@ -1,7 +1,8 @@
 import csv
 from rdflib import Graph, Literal
-from anzsrc import (FOR08, SKOS, RDF, OWL, RDFS, XSD, ANZSRC,
-                    ontoannot, createNode, add_anzsrc_code_prop)
+from anzsrc import (FOR08, SKOS, RDF, OWL, RDFS, XSD, ANZSRC, DC,
+                    ontoannot, createNode, add_anzsrc_code_prop,
+                    ontoversion)
 
 
 def genfor08():
@@ -42,6 +43,7 @@ def genfor08():
             u"research activity within Australia and New Zealand.",
                                           lang=u"en")))
     ontoannot(g, FOR08)
+    ontoversion(g, FOR08)
 
     g.add((FOR08.FOR, RDF.type, OWL.Class))
     g.add((FOR08.FOR, RDFS.subClassOf, SKOS.Concept))
