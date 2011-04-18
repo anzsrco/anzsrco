@@ -10,11 +10,11 @@ OUTPUT_DIR = "anzsrc_output"
 def genoutput(gengraph, fname, base):
     g = gengraph()
     setnamespaceprefixes(g)
-    f = open(OUTPUT_DIR + "/" + fname + '.owl', 'w')
-    g.serialize(f, format='xml', base=base)
+    f = open(OUTPUT_DIR + "/" + fname + '.rdf', 'w')
+    g.serialize(f, format='xml')
     f.close()
     f = open(OUTPUT_DIR + "/" + fname + '.n3', 'w')
-    g.serialize(f, format='n3', base=base)
+    g.serialize(f, format='n3')
     f.close()
 
 
