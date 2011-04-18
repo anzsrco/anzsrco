@@ -22,6 +22,7 @@ def genfor08():
     '''
     g = Graph()
     g.add((FOR08, RDF.type, OWL.Ontology))
+    g.add((FOR08, RDF.type, SKOS.ConceptScheme))
     g.add((FOR08, RDFS.label, Literal(u'FOR 2008 Ontology')))
     g.add((FOR08, RDFS.comment, Literal(u'An ontology that provides classes '
                                       u'codes and hierarchical information '

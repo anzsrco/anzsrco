@@ -30,6 +30,7 @@ def genseo98():
     """
     g = Graph()
     g.add((SEO98, RDF.type, OWL.Ontology))
+    g.add((SEO98, RDF.type, SKOS.ConceptScheme))
     g.add((SEO98, RDFS.label, Literal(u'SEO 1998 Ontology')))
     g.add((SEO98, RDFS.comment, Literal(u'An ontology that provides classes '
                                         u'codes and hierarchical information '

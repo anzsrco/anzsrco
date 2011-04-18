@@ -23,6 +23,7 @@ def genrfcd():
     # generate class definitions
     g = Graph()
     g.add((RFCD, RDF.type, OWL.Ontology))
+    g.add((RFCD, RDF.type, SKOS.ConceptScheme))
     g.add((RFCD, RDFS.label, Literal(u'RFCD 1998 Ontology')))
     g.add((RFCD, RDFS.comment, Literal(u'An ontology that provides classes '
                                       u'codes and hierarchical information '

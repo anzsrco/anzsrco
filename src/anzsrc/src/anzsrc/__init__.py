@@ -68,8 +68,12 @@ def createNode(g, ns, class_, code, name, broader):
     if broader is not None:
         g.add((codeuri, SKOS.broader, ns.term(broader)))
         g.add((ns.term(broader), SKOS.narrower, codeuri))
+    else:
+        g.add((ns, SKOS.hasTopConcept, codeuri))
     g.add((codeuri, RDFS.label, Literal(name.decode('utf-8'))))
     g.add((codeuri, ANZSRC.code, Literal(code)))
+    g.add((codeuri, SKOS.inScheme, ns))
+    g.add((codeuri, SKOS.prefLabel, Literal(name.decode('utf-8'), lang=u"en")))
 
 
 def setnamespaceprefixes(g):
