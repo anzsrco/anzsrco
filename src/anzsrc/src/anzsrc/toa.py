@@ -11,6 +11,9 @@ def gentoa():
     g.add((TOA, RDFS.comment, Literal(u'An ontology that provides classes '
                 u'codes and hierarchical information about ASRC/ANZSRC '
                 u'Type of Activity definitions.')))
+    g.add((TOA, DC.title, Literal(u"Australian and New Zealand Standard "
+                                    u"Research Classification (ANZSRC): "
+                                    u"Type of Activity.", lang=u"en")))
     ontoannot(g, TOA)
 
     # a class for TOA

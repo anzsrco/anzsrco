@@ -29,6 +29,19 @@ def genseo08():
     g.add((SEO08, RDFS.comment, Literal(u'An ontology that provides classes '
                                         u'codes and hierarchical information '
                                         u'about SEO 2008 codes.')))
+    g.add((SEO08, DC.title, Literal(u"Australian and New Zealand Standard "
+                                    u"Research Classification (ANZSRC): "
+                                    u"Socio-Economic Objective.", lang=u"en")))
+    g.add((SEO08, DC.description, Literal(u"The ANZSRC SEO classification "
+            u"allows R&D activity in Australia and New Zealand to be "
+            u"categorised according to the intended purpose or outcome of the "
+            u"research, rather than the processes or techniques used in order "
+            u"to achieve this objective."
+            u"\n"
+            u"The purpose categories include processes, products, health, "
+            u"education and other social and environmental aspects in "
+            u"Australia and New Zealand that R&D activity aims to improve.",
+                                          lang=u"en")))
     ontoannot(g, SEO08)
 
     g.add((SEO08.SEO, RDF.type, OWL.Class))

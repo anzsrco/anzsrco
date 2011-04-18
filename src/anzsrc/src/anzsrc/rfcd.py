@@ -26,6 +26,19 @@ def genrfcd():
     g.add((RFCD, RDFS.comment, Literal(u'An ontology that provides classes '
                                       u'codes and hierarchical information '
                                       u'about RFCD 1998 codes.')))
+    g.add((RFCD, DC.title, Literal(u"Australian Standard Research "
+                                   u"Classification (ASRC): "
+                                   u"Research Fields, Courses and Disciplines "
+                                   u"Classification", lang=u"en")))
+    g.add((RFCD, DC.description, Literal(u"This classification allows both R&D"
+            u" activity and other activity within the higher education sector "
+            u"to be categorised."
+            u"\n"
+            u"The categories in the classification include recognised academic"
+            u" disciplines and related major sub-fields taught at universities"
+            u" or tertiary institutions, major fields of research investigated"
+            u" by national research institutions and organisations, and "
+            u"emerging areas of study.", lang="en")))
     ontoannot(g, RFCD)
 
     g.add((RFCD.RFCD, RDF.type, OWL.Class))

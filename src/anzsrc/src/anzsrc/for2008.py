@@ -25,6 +25,22 @@ def genfor08():
     g.add((FOR08, RDFS.comment, Literal(u'An ontology that provides classes '
                                       u'codes and hierarchical information '
                                       u'about FOR 2008 codes.')))
+    g.add((FOR08, DC.title, Literal(u"Australian and New Zealand Standard "
+                                    u"Research Classification (ANZSRC): "
+                                    u"Fields of Research.", lang=u"en")))
+    g.add((FOR08, DC.description, Literal(u"The ANZSRC FOR allows R&D activity"
+            u" to be categorised according to the methodology used in the R&D,"
+            u" rather than the activity of the unit performing the R&D or the "
+            u"purpose of the R&D."
+            u"\n"
+            u"The categories in the classification include major fields and "
+            u"related sub-fields of research and emerging areas of study "
+            u"investigated by businesses, universities, tertiary institutions,"
+            u" national research institutions and other organisations."
+            u"\n"
+            u"This classification allows the categorisation of fields of "
+            u"research activity within Australia and New Zealand.",
+                                          lang=u"en")))
     ontoannot(g, FOR08)
 
     g.add((FOR08.FOR, RDF.type, OWL.Class))

@@ -33,6 +33,15 @@ def genseo98():
     g.add((SEO98, RDFS.comment, Literal(u'An ontology that provides classes '
                                         u'codes and hierarchical information '
                                         u'about SEO 1998 codes.')))
+    g.add((SEO98, DC.title, Literal(u"Australian Standard Research "
+                                    u"Classification (ASRC): "
+                                    u"Socio-Economic Objective Classification",
+                                    lang=u"en")))
+    g.add((SEO98, DC.description, Literal(u"The SEO Classification allows R&D "
+            u"data to be classified according to the researcher's perceived "
+            u"purpose. The purpose categories take account of processes, "
+            u"products, health, education and other social and environmental "
+            u"aspects of particular interest.", lang=u"en")))
     ontoannot(g, SEO98)
 
     g.add((SEO98.SEO, RDF.type, OWL.Class))
