@@ -1,7 +1,7 @@
 import csv
 from rdflib import Graph, Literal
 from anzsrc import (FOR, RFCD, FOR08, VIVO, RDF, OWL, RDFS, SKOS, ANZSRC,
-                    ontoannot, add_matchingproperties)
+                    ontoannot, ontoversion, add_matchingproperties)
 
 
 def genfor():
@@ -17,6 +17,7 @@ def genfor():
                                       u'definitions for RFCD 1998 and '
                                       u'FOR 2008 ontologies.')))
     ontoannot(g, FOR)
+    ontoversion(g, FOR)
 
     g.add((FOR.FOR, RDF.type, OWL.Class))
     g.add((FOR.FOR, RDFS.label, Literal(u'FOR code')))

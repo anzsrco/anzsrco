@@ -32,12 +32,12 @@ def ontoversion(g, ns):
     # dcterms:hasVersion ponits to another version of the same thing.
     # owl:versionInfo is an annotation property. (might be used to describe
     # changes)
-    g.add((ns, OWL.versionInfo, Literal(ns + u'/0.2')))
-    g.add((ns, OWL.priorVersion, Literal(ns + u'/0.1')))
+    g.add((ns, OWL.versionInfo, Literal(ns + u'0.2')))
+    g.add((ns, OWL.priorVersion, Literal(ns + u'0.1')))
     # g.add((ns, DCTERMS.hasVersion, ns + u'/0.2'))
     # duplicate the node ns with correct versioned URI
     for (s, p, o) in g.triples((ns, None, None)):
-        g.add((ns + u'/0.2', p, o))
+        g.add((ns + u'0.2', p, o))
 
 
 def ontoannot(g, ns):
@@ -104,6 +104,7 @@ def genanzsrc():
                    u'ontologies.')))
 
     ontoannot(g, ANZSRC)
+    ontoversion(g, ANZSRC)
 
     g.add((ANZSRC.ANZSRC, RDF.type, OWL.Class))
     g.add((ANZSRC.ANZSRC, RDFS.label, Literal(u'ANZSRC code')))
