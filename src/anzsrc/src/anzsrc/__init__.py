@@ -116,17 +116,9 @@ def genanzsrc():
     g.add((SEO.SEO, RDFS.subClassOf, ANZSRC.ANZSRC))
     g.add((TOA.TOA, RDFS.subClassOf, ANZSRC.ANZSRC))
 
-    add_anzsrc_code_prop(g)
-
     add_matchingproperties(g)
 
     return g
-
-
-def add_anzsrc_code_prop(g):
-    g.add((ANZSRC.code, RDF.type, OWL.DatatypeProperty))
-    g.add((ANZSRC.code, RDFS.domain, ANZSRC.ANZSRC))
-    g.add((ANZSRC.code, RDFS.range, XSD.string))
 
 
 def add_matchingproperties(g):

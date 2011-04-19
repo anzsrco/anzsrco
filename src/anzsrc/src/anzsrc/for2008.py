@@ -1,8 +1,7 @@
 import csv
 from rdflib import Graph, Literal
 from anzsrc import (FOR08, SKOS, RDF, OWL, RDFS, XSD, ANZSRC, DC,
-                    ontoannot, createNode, add_anzsrc_code_prop,
-                    ontoversion)
+                    ontoannot, createNode, ontoversion)
 
 
 def genfor08():
@@ -75,8 +74,6 @@ def genfor08():
     g.add((FOR08.code, RDF.type, OWL.DatatypeProperty))
     g.add((FOR08.code, RDFS.domain, FOR08.FOR))
     g.add((FOR08.code, RDFS.range, XSD.string))
-
-    add_anzsrc_code_prop(g)
 
     for98csv = csv.reader(open('anzsrc_data/for08.csv'))
     for98csv.next()

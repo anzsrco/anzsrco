@@ -1,8 +1,7 @@
 import csv
 from rdflib import Graph, Literal
 from anzsrc import (RFCD, SKOS, RDF, OWL, RDFS, ANZSRC, DC,
-                    ontoannot, ontoversion,
-                    createNode, add_anzsrc_code_prop)
+                    ontoannot, ontoversion, createNode)
 
 
 def genrfcd():
@@ -67,8 +66,6 @@ def genrfcd():
     g.add((RFCD.RFCD6, RDFS.label, Literal(u'RFCD 1998 6 digit Code')))
     g.add((RFCD.RFCD6, RDFS.comment,
            Literal(u'Class for RFCD 1998 6 digit codes')))
-
-    add_anzsrc_code_prop(g)
 
     # read data from csv files
     rfcdcsv = csv.reader(open('anzsrc_data/rfcd.csv'))

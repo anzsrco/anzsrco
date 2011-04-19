@@ -1,8 +1,7 @@
 import csv
 from rdflib import Graph, Literal
 from anzsrc import (SEO08, SKOS, RDF, OWL, RDFS, DC,
-                    ontoannot, ontoversion,
-                    createNode, add_anzsrc_code_prop)
+                    ontoannot, ontoversion, createNode)
 
 ######################################################
 # Static data not reflected in csv files
@@ -75,8 +74,6 @@ def genseo08():
     g.add((SEO08.SEO6, RDFS.label, Literal(u'SEO 2008 6 digit Code')))
     g.add((SEO08.SEO6, RDFS.comment,
            Literal(u'Class for SEO 2008 6 digit codes')))
-
-    add_anzsrc_code_prop(g)
 
     seo98csv = csv.reader(open('anzsrc_data/seo08.csv'))
     seo98csv.next()
