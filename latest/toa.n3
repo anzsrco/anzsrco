@@ -5,40 +5,72 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix toa: <http://purl.org/asc/1297.0/1993/toa/> .
 
-toa: a owl:Ontology;
+<http://purl.org/asc/1297.0/1993/toa/AppliedResearch> a <http://purl.org/asc/1297.0/1993/toa/TOA>,
+        <http://www.w3.org/2002/07/owl#Thing>;
+    rdfs:label "Applied research";
+    rdfs:comment "Applied research is original work undertaken primarily to acquire new knowledge with a specific application in view. It is undertaken either to determine possible uses for the findings of basic research or to determine new ways of achieving some specific and predetermined objectives.";
+    skos:inScheme toa:;
+    skos:prefLabel "Applied research"@en .
+
+<http://purl.org/asc/1297.0/1993/toa/ExperimentalDevelopment> a <http://purl.org/asc/1297.0/1993/toa/TOA>,
+        <http://www.w3.org/2002/07/owl#Thing>;
+    rdfs:label "Experimental development";
+    rdfs:comment "Experimental development is systematic work, using existing knowledge gained from research or practical experience, that is directed to producing new materials, products or devices, to installing new processes, systems and services, or to improving substantially those already produced or installed.";
+    skos:inScheme toa:;
+    skos:prefLabel "Experimental development"@en .
+
+<http://purl.org/asc/1297.0/1993/toa/PureBasicResearch> a <http://purl.org/asc/1297.0/1993/toa/TOA>,
+        <http://www.w3.org/2002/07/owl#Thing>;
+    rdfs:label "Pure basic research";
+    rdfs:comment "Pure basic research is experimental and theoretical work undertaken to acquire new knowledge without looking for long term benefits other than the advancement of knowledge.";
+    skos:inScheme toa:;
+    skos:prefLabel "Pure basic research"@en .
+
+<http://purl.org/asc/1297.0/1993/toa/StrategicBasicResearch> a <http://purl.org/asc/1297.0/1993/toa/TOA>,
+        <http://www.w3.org/2002/07/owl#Thing>;
+    rdfs:label "Strategic basic research";
+    rdfs:comment "Strategic basic research is experimental and theoretical work undertaken to acquire new knowledge directed into specified broad areas in the expectation of useful discoveries. It provides the broad base of knowledge necessary for the solution of recognised practical problems.";
+    skos:inScheme toa:;
+    skos:prefLabel "Strategic basic research"@en .
+
+"http://purl.org/asc/1297.0/1993/toa/0.2" a <http://www.w3.org/2002/07/owl#Ontology>,
+        <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
     rdfs:label "TOA 1993 Ontology";
     cc:license <http://creativecommons.org/licenses/by-nc/3.0/au/>;
     cc:morePermissions <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
     dc:creator "Griffith University",
         "University of Southern Queensland";
-    dc:date "2011-04-01";
+    dc:date "2011-04-19";
     dc:rights "The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.";
     dc:source <http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C>;
+    dc:title "Australian and New Zealand Standard Research Classification (ANZSRC): Type of Activity."@en;
     rdfs:comment "An ontology that provides classes codes and hierarchical information about ASRC/ANZSRC Type of Activity definitions.";
-    rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0> .
+    rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
+    owl:priorVersion "http://purl.org/asc/1297.0/1993/toa/0.1";
+    owl:versionInfo "http://purl.org/asc/1297.0/1993/toa/0.2" .
 
-toa:AppliedResearch a toa:TOA,
-        owl:Thing;
-    rdfs:label "Applied research";
-    rdfs:comment "Applied research is original work undertaken primarily to acquire new knowledge with a specific application in view. It is undertaken either to determine possible uses for the findings of basic research or to determine new ways of achieving some specific and predetermined objectives." .
+toa: a <http://www.w3.org/2002/07/owl#Ontology>,
+        <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
+    rdfs:label "TOA 1993 Ontology";
+    cc:license <http://creativecommons.org/licenses/by-nc/3.0/au/>;
+    cc:morePermissions <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
+    dc:creator "Griffith University",
+        "University of Southern Queensland";
+    dc:date "2011-04-19";
+    dc:rights "The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.";
+    dc:source <http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C>;
+    dc:title "Australian and New Zealand Standard Research Classification (ANZSRC): Type of Activity."@en;
+    rdfs:comment "An ontology that provides classes codes and hierarchical information about ASRC/ANZSRC Type of Activity definitions.";
+    rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
+    owl:priorVersion "http://purl.org/asc/1297.0/1993/toa/0.1";
+    owl:versionInfo "http://purl.org/asc/1297.0/1993/toa/0.2";
+    skos:hasTopConcept <http://purl.org/asc/1297.0/1993/toa/AppliedResearch>,
+        <http://purl.org/asc/1297.0/1993/toa/ExperimentalDevelopment>,
+        <http://purl.org/asc/1297.0/1993/toa/PureBasicResearch>,
+        <http://purl.org/asc/1297.0/1993/toa/StrategicBasicResearch> .
 
-toa:ExperimentalDevelopment a toa:TOA,
-        owl:Thing;
-    rdfs:label "Experimental development";
-    rdfs:comment "Experimental development is systematic work, using existing knowledge gained from research or practical experience, that is directed to producing new materials, products or devices, to installing new processes, systems and services, or to improving substantially those already produced or installed." .
-
-toa:PureBasicResearch a toa:TOA,
-        owl:Thing;
-    rdfs:label "Pure basic research";
-    rdfs:comment "Pure basic research is experimental and theoretical work undertaken to acquire new knowledge without looking for long term benefits other than the advancement of knowledge." .
-
-toa:StrategicBasicResearch a toa:TOA,
-        owl:Thing;
-    rdfs:label "Strategic basic research";
-    rdfs:comment "Strategic basic research is experimental and theoretical work undertaken to acquire new knowledge directed into specified broad areas in the expectation of useful discoveries. It provides the broad base of knowledge necessary for the solution of recognised practical problems." .
-
-toa:TOA a owl:Class;
+<http://purl.org/asc/1297.0/1993/toa/TOA> a <http://www.w3.org/2002/07/owl#Class>;
     rdfs:label "TOA 1993 Definition";
     rdfs:comment "Instances of this class describe TOA definitions";
-    rdfs:subClassOf skos:Concept .
+    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
 
