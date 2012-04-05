@@ -5,17 +5,17 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://purl.org/asc/1297.0/vivo.rdf">
-    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
-    <dc:creator>University of Southern Queensland</dc:creator>
-    <dc:creator>Griffith University</dc:creator>
-    <dc:source rdf:resource="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C"/>
-    <dc:date>2011-04-19</dc:date>
-    <cc:morePermissions rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
-    <dc:rights>The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.</dc:rights>
-    <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/au/"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/asc/1297.0/ANZSRC">
     <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#SubjectArea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/vivo.rdf">
+    <dc:source rdf:resource="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C"/>
+    <dc:rights>The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.</dc:rights>
+    <dc:creator>Griffith University</dc:creator>
+    <dc:creator>University of Southern Queensland</dc:creator>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/au/"/>
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <dc:date>2012-04-05</dc:date>
+    <cc:morePermissions rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
   </rdf:Description>
 </rdf:RDF>

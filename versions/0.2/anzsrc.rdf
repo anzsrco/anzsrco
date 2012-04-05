@@ -6,44 +6,59 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://purl.org/asc/1297.0/partialMatch">
-    <rdfs:comment>The subject concept is partially covered by the object.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/asc/1297.0/ANZSRC">
-    <rdfs:comment>Superclass for ANZSRC codes</rdfs:comment>
-    <rdfs:label>ANZSRC code</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/asc/1297.0/seo/SEO">
     <rdfs:subClassOf rdf:resource="http://purl.org/asc/1297.0/ANZSRC"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/asc/1297.0/">
-    <dc:source rdf:resource="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C"/>
-    <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/au/"/>
-    <rdfs:label>ANZSRC Base Ontology</rdfs:label>
-    <dc:date>2011-04-19</dc:date>
-    <owl:priorVersion>http://purl.org/asc/1297.0/0.1</owl:priorVersion>
-    <rdfs:comment>An ontology that provides some base definitions for commonly used by all FOR, RFCD, SEO, etc. ontologies.</rdfs:comment>
-    <dc:rights>The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.</dc:rights>
-    <owl:versionInfo>http://purl.org/asc/1297.0/0.2</owl:versionInfo>
-    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
-    <cc:morePermissions rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
-    <dc:creator>Griffith University</dc:creator>
-    <dc:creator>University of Southern Queensland</dc:creator>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/ANZSRC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ANZSRC code</rdfs:label>
+    <rdfs:comment>Superclass for ANZSRC codes</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/asc/1297.0/1993/toa/TOA">
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/0.2">
+    <dc:date>2012-04-05</dc:date>
+    <owl:versionInfo rdf:resource="http://purl.org/asc/1297.0/0.2"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/au/"/>
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <dc:rights>The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.</dc:rights>
+    <dc:creator>University of Southern Queensland</dc:creator>
+    <dc:creator>Griffith University</dc:creator>
+    <owl:priorVersion rdf:resource="http://purl.org/asc/1297.0/0.1"/>
+    <dc:source rdf:resource="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <cc:morePermissions rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <rdfs:label>ANZSRC Base Ontology</rdfs:label>
+    <rdfs:comment>An ontology that provides some base definitions for commonly used by all FOR, RFCD, SEO, etc. ontologies.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/partialMatch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>The subject concept is partially covered by the object.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/">
+    <owl:priorVersion rdf:resource="http://purl.org/asc/1297.0/0.1"/>
+    <dc:date>2012-04-05</dc:date>
+    <owl:versionInfo rdf:resource="http://purl.org/asc/1297.0/0.2"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/au/"/>
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <dc:creator>University of Southern Queensland</dc:creator>
+    <dc:creator>Griffith University</dc:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:source rdf:resource="http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C"/>
+    <dc:rights>The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.</dc:rights>
+    <cc:morePermissions rdf:resource="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0"/>
+    <rdfs:label>ANZSRC Base Ontology</rdfs:label>
+    <rdfs:comment>An ontology that provides some base definitions for commonly used by all FOR, RFCD, SEO, etc. ontologies.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/for/FOR">
     <rdfs:subClassOf rdf:resource="http://purl.org/asc/1297.0/ANZSRC"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/asc/1297.0/fullMatch">
-    <rdfs:comment>The subject concept is fully covered by the object.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>The subject concept is fully covered by the object.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/asc/1297.0/for/FOR">
+  <rdf:Description rdf:about="http://purl.org/asc/1297.0/1993/toa/TOA">
     <rdfs:subClassOf rdf:resource="http://purl.org/asc/1297.0/ANZSRC"/>
   </rdf:Description>
 </rdf:RDF>

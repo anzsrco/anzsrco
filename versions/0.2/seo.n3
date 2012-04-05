@@ -4,32 +4,35 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix seo: <http://purl.org/asc/1297.0/seo/> .
+@prefix seo08: <http://purl.org/asc/1297.0/2008/seo/> .
+@prefix seo98: <http://purl.org/asc/1297.0/1998/seo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://purl.org/asc/1297.0/1998/seo/SEO> rdfs:subClassOf <http://purl.org/asc/1297.0/seo/SEO> .
+seo98:SEO rdfs:subClassOf seo:SEO .
 
-<http://purl.org/asc/1297.0/2008/seo/SEO> rdfs:subClassOf <http://purl.org/asc/1297.0/seo/SEO> .
+seo08:SEO rdfs:subClassOf seo:SEO .
 
-<http://purl.org/asc/1297.0/fullMatch> a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+anzsrc:fullMatch a owl:ObjectProperty;
     rdfs:comment "The subject concept is fully covered by the object.";
-    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#relatedMatch> .
+    rdfs:subPropertyOf skos:relatedMatch .
 
-<http://purl.org/asc/1297.0/partialMatch> a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+anzsrc:partialMatch a owl:ObjectProperty;
     rdfs:comment "The subject concept is partially covered by the object.";
-    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#relatedMatch> .
+    rdfs:subPropertyOf skos:relatedMatch .
 
-seo: a <http://www.w3.org/2002/07/owl#Ontology>;
+seo: a owl:Ontology;
     rdfs:label "SEO Ontology";
     cc:license <http://creativecommons.org/licenses/by-nc/3.0/au/>;
     cc:morePermissions <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
     dc:creator "Griffith University",
         "University of Southern Queensland";
-    dc:date "2011-04-19";
+    dc:date "2012-04-05";
     dc:rights "The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.";
     dc:source <http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C>;
     rdfs:comment "An ontology that provides some base definitions for SEO 1998 and SEO 2008 ontologies.";
     rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
-    owl:priorVersion "http://purl.org/asc/1297.0/seo/0.1";
-    owl:versionInfo "http://purl.org/asc/1297.0/seo/0.2" .
+    owl:priorVersion <http://purl.org/asc/1297.0/seo/0.1>;
+    owl:versionInfo <http://purl.org/asc/1297.0/seo/0.2> .
 
 <http://purl.org/asc/1297.0/1998/seo/620101> anzsrc:fullMatch <http://purl.org/asc/1297.0/2008/seo/820507> .
 
@@ -2575,24 +2578,24 @@ seo: a <http://www.w3.org/2002/07/owl#Ontology>;
 <http://purl.org/asc/1297.0/2008/seo/970120> anzsrc:partialMatch <http://purl.org/asc/1297.0/1998/seo/780108>,
         <http://purl.org/asc/1297.0/1998/seo/780199> .
 
-"http://purl.org/asc/1297.0/seo/0.2" a <http://www.w3.org/2002/07/owl#Ontology>;
+<http://purl.org/asc/1297.0/seo/0.2> a owl:Ontology;
     rdfs:label "SEO Ontology";
     cc:license <http://creativecommons.org/licenses/by-nc/3.0/au/>;
     cc:morePermissions <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
     dc:creator "Griffith University",
         "University of Southern Queensland";
-    dc:date "2011-04-19";
+    dc:date "2012-04-05";
     dc:rights "The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.";
     dc:source <http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C>;
     rdfs:comment "An ontology that provides some base definitions for SEO 1998 and SEO 2008 ontologies.";
     rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
-    owl:priorVersion "http://purl.org/asc/1297.0/seo/0.1";
-    owl:versionInfo "http://purl.org/asc/1297.0/seo/0.2" .
+    owl:priorVersion <http://purl.org/asc/1297.0/seo/0.1>;
+    owl:versionInfo <http://purl.org/asc/1297.0/seo/0.2> .
 
-<http://purl.org/asc/1297.0/seo/SEO> a <http://www.w3.org/2002/07/owl#Class>;
+seo:SEO a owl:Class;
     rdfs:label "SEO Code";
     rdfs:comment "Superclass for SEO codes";
-    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+    rdfs:subClassOf skos:Concept .
 
 <http://purl.org/asc/1297.0/1998/seo/620104> anzsrc:fullMatch <http://purl.org/asc/1297.0/2008/seo/820401>,
         <http://purl.org/asc/1297.0/2008/seo/820404>,

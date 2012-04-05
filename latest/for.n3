@@ -2,34 +2,37 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix for: <http://purl.org/asc/1297.0/for/> .
+@prefix for08: <http://purl.org/asc/1297.0/2008/for/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rfcd: <http://purl.org/asc/1297.0/1998/rfcd/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://purl.org/asc/1297.0/1998/rfcd/RFCD> rdfs:subClassOf <http://purl.org/asc/1297.0/for/FOR> .
+rfcd:RFCD rdfs:subClassOf for:FOR .
 
-<http://purl.org/asc/1297.0/2008/for/FOR> rdfs:subClassOf <http://purl.org/asc/1297.0/for/FOR> .
+for08:FOR rdfs:subClassOf for:FOR .
 
-for: a <http://www.w3.org/2002/07/owl#Ontology>;
+for: a owl:Ontology;
     rdfs:label "FOR Ontology";
     cc:license <http://creativecommons.org/licenses/by-nc/3.0/au/>;
     cc:morePermissions <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
     dc:creator "Griffith University",
         "University of Southern Queensland";
-    dc:date "2011-04-19";
+    dc:date "2012-04-05";
     dc:rights "The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.";
     dc:source <http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C>;
     rdfs:comment "An ontology that provides some base definitions for RFCD 1998 and FOR 2008 ontologies.";
     rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
-    owl:priorVersion "http://purl.org/asc/1297.0/for/0.1";
-    owl:versionInfo "http://purl.org/asc/1297.0/for/0.2" .
+    owl:priorVersion <http://purl.org/asc/1297.0/for/0.1>;
+    owl:versionInfo <http://purl.org/asc/1297.0/for/0.2> .
 
-<http://purl.org/asc/1297.0/fullMatch> a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+anzsrc:fullMatch a owl:ObjectProperty;
     rdfs:comment "The subject concept is fully covered by the object.";
-    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#relatedMatch> .
+    rdfs:subPropertyOf skos:relatedMatch .
 
-<http://purl.org/asc/1297.0/partialMatch> a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+anzsrc:partialMatch a owl:ObjectProperty;
     rdfs:comment "The subject concept is partially covered by the object.";
-    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#relatedMatch> .
+    rdfs:subPropertyOf skos:relatedMatch .
 
 <http://purl.org/asc/1297.0/1998/rfcd/230102> anzsrc:partialMatch <http://purl.org/asc/1297.0/2008/for/010101> .
 
@@ -4237,24 +4240,24 @@ for: a <http://www.w3.org/2002/07/owl#Ontology>;
 <http://purl.org/asc/1297.0/2008/for/220316> anzsrc:fullMatch <http://purl.org/asc/1297.0/1998/rfcd/440113>,
         <http://purl.org/asc/1297.0/1998/rfcd/440115> .
 
-"http://purl.org/asc/1297.0/for/0.2" a <http://www.w3.org/2002/07/owl#Ontology>;
+<http://purl.org/asc/1297.0/for/0.2> a owl:Ontology;
     rdfs:label "FOR Ontology";
     cc:license <http://creativecommons.org/licenses/by-nc/3.0/au/>;
     cc:morePermissions <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
     dc:creator "Griffith University",
         "University of Southern Queensland";
-    dc:date "2011-04-19";
+    dc:date "2012-04-05";
     dc:rights "The source data is published by the Australian Bureau of Statistics, and can be found at the following address: http://www.abs.gov.au/ausstats/abs@.nsf/0/4AE1B46AE2048A28CA25741800044242 . This document is published under the Creative Commons Attribution License 3.0 Australia.";
     dc:source <http://www.abs.gov.au/AUSSTATS/abs@.nsf/allprimarymainfeatures/5D99AEA1DD8AA8E0CA2574180005421C>;
     rdfs:comment "An ontology that provides some base definitions for RFCD 1998 and FOR 2008 ontologies.";
     rdfs:seeAlso <http://www.abs.gov.au/ausstats/abs@.nsf/mf/1297.0>;
-    owl:priorVersion "http://purl.org/asc/1297.0/for/0.1";
-    owl:versionInfo "http://purl.org/asc/1297.0/for/0.2" .
+    owl:priorVersion <http://purl.org/asc/1297.0/for/0.1>;
+    owl:versionInfo <http://purl.org/asc/1297.0/for/0.2> .
 
-<http://purl.org/asc/1297.0/for/FOR> a <http://www.w3.org/2002/07/owl#Class>;
+for:FOR a owl:Class;
     rdfs:label "FOR code";
     rdfs:comment "Superclass for FOR codes";
-    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+    rdfs:subClassOf skos:Concept .
 
 <http://purl.org/asc/1297.0/1998/rfcd/230101> anzsrc:partialMatch <http://purl.org/asc/1297.0/2008/for/010104>,
         <http://purl.org/asc/1297.0/2008/for/010107>,
