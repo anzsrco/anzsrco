@@ -6802,7 +6802,7 @@ The purpose categories include processes, products, health, education and other 
 
 <http://purl.org/asc/1297.0/2008/seo/81> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "DEFENCE";
+    rdfs:label "Defence";
     anzsrc:code "81";
     skos:broader seo08:A;
     skos:inScheme seo08:;
@@ -6874,7 +6874,7 @@ The purpose categories include processes, products, health, education and other 
 
 <http://purl.org/asc/1297.0/2008/seo/97> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "EXPANDING KNOWLEDGE";
+    rdfs:label "Expanding Knowledge";
     anzsrc:code "97";
     skos:broader seo08:E;
     skos:inScheme seo08:;
@@ -7185,7 +7185,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/84> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "MINERAL RESOURCES (EXCL. ENERGY RESOURCES)";
+    rdfs:label "Mineral Resources (excl. Energy Resources)";
     anzsrc:code "84";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -7263,7 +7263,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/88> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "TRANSPORT";
+    rdfs:label "Transport";
     anzsrc:code "88";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -7618,7 +7618,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/89> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "INFORMATION AND COMMUNICATION SERVICES";
+    rdfs:label "Information and Communication Services";
     anzsrc:code "89";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -7646,7 +7646,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/90> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "COMMERCIAL SERVICES AND TOURISM";
+    rdfs:label "Commercial Services and Tourism";
     anzsrc:code "90";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -7674,7 +7674,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/91> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "ECONOMIC FRAMEWORK";
+    rdfs:label "Economic Framework";
     anzsrc:code "91";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -7688,7 +7688,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/92> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "HEALTH";
+    rdfs:label "Health";
     anzsrc:code "92";
     skos:broader seo08:C;
     skos:inScheme seo08:;
@@ -7702,7 +7702,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/93> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "EDUCATION AND TRAINING";
+    rdfs:label "Education and Training";
     anzsrc:code "93";
     skos:broader seo08:C;
     skos:inScheme seo08:;
@@ -7716,7 +7716,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/94> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "LAW, POLITICS AND COMMUNITY SERVICES";
+    rdfs:label "Law, Politics and Community Services";
     anzsrc:code "94";
     skos:broader seo08:C;
     skos:inScheme seo08:;
@@ -7744,7 +7744,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/95> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "CULTURAL UNDERSTANDING";
+    rdfs:label "Cultural Understanding";
     anzsrc:code "95";
     skos:broader seo08:C;
     skos:inScheme seo08:;
@@ -7801,7 +7801,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/83> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "ANIMAL PRODUCTION AND ANIMAL PRIMARY PRODUCTS";
+    rdfs:label "Animal Production and Animal Primary Products";
     anzsrc:code "83";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -7906,7 +7906,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/87> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "CONSTRUCTION";
+    rdfs:label "Construction";
     anzsrc:code "87";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -8026,7 +8026,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/82> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "PLANT PRODUCTION AND PLANT PRIMARY PRODUCTS";
+    rdfs:label "Plant Production and Plant Primary Products";
     anzsrc:code "82";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -8204,7 +8204,7 @@ seo08:SEOSection a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/85> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "ENERGY";
+    rdfs:label "Energy";
     anzsrc:code "85";
     skos:broader seo08:B;
     skos:inScheme seo08:;
@@ -8735,7 +8735,7 @@ seo08:B a seo08:SEOSection,
 
 <http://purl.org/asc/1297.0/2008/seo/96> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "ENVIRONMENT";
+    rdfs:label "Environment";
     anzsrc:code "96";
     skos:broader seo08:D;
     skos:inScheme seo08:;
@@ -8837,7 +8837,7 @@ seo08:SEO2 a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/seo/86> a seo08:SEO2,
         owl:Thing;
-    rdfs:label "MANUFACTURING";
+    rdfs:label "Manufacturing";
     anzsrc:code "86";
     skos:broader seo08:B;
     skos:inScheme seo08:;

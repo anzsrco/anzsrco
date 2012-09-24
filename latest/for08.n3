@@ -10104,7 +10104,7 @@ This classification allows the categorisation of fields of research activity wit
 
 <http://purl.org/asc/1297.0/2008/for/17> a for08:FOR2,
         owl:Thing;
-    rdfs:label "PSYCHOLOGY AND COGNITIVE SCIENCES";
+    rdfs:label "Psychology and Cognitive Sciences";
     anzsrc:code "17";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1701>,
@@ -10114,7 +10114,7 @@ This classification allows the categorisation of fields of research activity wit
 
 <http://purl.org/asc/1297.0/2008/for/18> a for08:FOR2,
         owl:Thing;
-    rdfs:label "LAW AND LEGAL STUDIES";
+    rdfs:label "Law and Legal Studies";
     anzsrc:code "18";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1801>,
@@ -10153,7 +10153,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/05> a for08:FOR2,
         owl:Thing;
-    rdfs:label "ENVIRONMENTAL SCIENCES";
+    rdfs:label "Environmental Sciences";
     anzsrc:code "05";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0501>,
@@ -10224,7 +10224,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/13> a for08:FOR2,
         owl:Thing;
-    rdfs:label "EDUCATION";
+    rdfs:label "Education";
     anzsrc:code "13";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1301>,
@@ -10235,7 +10235,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/14> a for08:FOR2,
         owl:Thing;
-    rdfs:label "ECONOMICS";
+    rdfs:label "Economics";
     anzsrc:code "14";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1401>,
@@ -10294,7 +10294,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/21> a for08:FOR2,
         owl:Thing;
-    rdfs:label "HISTORY AND ARCHAEOLOGY";
+    rdfs:label "History and Archaeology";
     anzsrc:code "21";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/2101>,
@@ -10617,7 +10617,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/22> a for08:FOR2,
         owl:Thing;
-    rdfs:label "PHILOSOPHY AND RELIGIOUS STUDIES";
+    rdfs:label "Philosophy and Religious Studies";
     anzsrc:code "22";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/2201>,
@@ -10629,7 +10629,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/01> a for08:FOR2,
         owl:Thing;
-    rdfs:label "MATHEMATICAL SCIENCES";
+    rdfs:label "Mathematical Sciences";
     anzsrc:code "01";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0101>,
@@ -10768,7 +10768,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/12> a for08:FOR2,
         owl:Thing;
-    rdfs:label "BUILT ENVIRONMENT AND DESIGN";
+    rdfs:label "Built Environment and Design";
     anzsrc:code "12";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1201>,
@@ -10865,7 +10865,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/19> a for08:FOR2,
         owl:Thing;
-    rdfs:label "STUDIES IN CREATIVE ARTS AND WRITING";
+    rdfs:label "Studies in Creative Arts and Writing";
     anzsrc:code "19";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1901>,
@@ -10892,7 +10892,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/20> a for08:FOR2,
         owl:Thing;
-    rdfs:label "LANGUAGE, COMMUNICATION AND CULTURE";
+    rdfs:label "Language, Communication and Culture";
     anzsrc:code "20";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/2001>,
@@ -10949,7 +10949,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/02> a for08:FOR2,
         owl:Thing;
-    rdfs:label "PHYSICAL SCIENCES";
+    rdfs:label "Physical Sciences";
     anzsrc:code "02";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0201>,
@@ -10993,7 +10993,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/04> a for08:FOR2,
         owl:Thing;
-    rdfs:label "EARTH SCIENCES";
+    rdfs:label "Earth Sciences";
     anzsrc:code "04";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0401>,
@@ -11218,7 +11218,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/03> a for08:FOR2,
         owl:Thing;
-    rdfs:label "CHEMICAL SCIENCES";
+    rdfs:label "Chemical Sciences";
     anzsrc:code "03";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0301>,
@@ -11297,7 +11297,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/07> a for08:FOR2,
         owl:Thing;
-    rdfs:label "AGRICULTURAL AND VETERINARY SCIENCES";
+    rdfs:label "Agricultural and Veterinary Sciences";
     anzsrc:code "07";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0701>,
@@ -11328,7 +11328,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/08> a for08:FOR2,
         owl:Thing;
-    rdfs:label "INFORMATION AND COMPUTING SCIENCES";
+    rdfs:label "Information and Computing Sciences";
     anzsrc:code "08";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0801>,
@@ -11359,7 +11359,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/10> a for08:FOR2,
         owl:Thing;
-    rdfs:label "TECHNOLOGY";
+    rdfs:label "Technology";
     anzsrc:code "10";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1001>,
@@ -11422,7 +11422,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/15> a for08:FOR2,
         owl:Thing;
-    rdfs:label "COMMERCE, MANAGEMENT, TOURISM AND SERVICES";
+    rdfs:label "Commerce, Management, Tourism and Services";
     anzsrc:code "15";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1501>,
@@ -11552,7 +11552,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/06> a for08:FOR2,
         owl:Thing;
-    rdfs:label "BIOLOGICAL SCIENCES";
+    rdfs:label "Biological Sciences";
     anzsrc:code "06";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0601>,
@@ -11687,7 +11687,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/16> a for08:FOR2,
         owl:Thing;
-    rdfs:label "STUDIES IN HUMAN SOCIETY";
+    rdfs:label "Studies in Human Society";
     anzsrc:code "16";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1601>,
@@ -12480,7 +12480,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/09> a for08:FOR2,
         owl:Thing;
-    rdfs:label "ENGINEERING";
+    rdfs:label "Engineering";
     anzsrc:code "09";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/0901>,
@@ -12503,7 +12503,7 @@ for08:FOR a owl:Class;
 
 <http://purl.org/asc/1297.0/2008/for/11> a for08:FOR2,
         owl:Thing;
-    rdfs:label "MEDICAL AND HEALTH SCIENCES";
+    rdfs:label "Medical and Health Sciences";
     anzsrc:code "11";
     skos:inScheme for08:;
     skos:narrower <http://purl.org/asc/1297.0/2008/for/1101>,
