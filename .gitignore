@@ -3,3 +3,7 @@ anzsrc_output
 develop-eggs
 parts
 .installed.cfg
+eggs
+*.pyc
+src/anzsrc/src/anzsrc.egg-info
+.DS_Store
