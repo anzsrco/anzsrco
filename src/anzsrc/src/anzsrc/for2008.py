@@ -87,19 +87,19 @@ def genfor08():
         if divcode not in division:
             division[divcode] = div
         elif division[divcode] != div:
-            print "WARNING division"
+            print("WARNING division")
 
         grcode = int(code[:4])
         if grcode not in group:
             group[grcode] = gr
         elif group[grcode] != gr:
-            print "WARNING group"
+            print("WARNING group")
 
         ficode = int(code)
         if ficode not in field:
             field[ficode] = fi
         elif field[ficode] != fi:
-            print "WARNING objective"
+            print("WARNING objective")
 
     # checkagainst mapping:
     for98csv = csv.reader(open('anzsrc_data/for08-rfcd.csv'))
@@ -111,14 +111,14 @@ def genfor08():
     for row in for98csv:
         try:
             if int(row[0]) not in field:
-                print 'WARNING: missing code ', row
+                print('WARNING: missing code %s' % row)
         except ValueError:
             continue
 
-    print 'FOR'
-    print 'Divisions (22):', len(division)
-    print 'Groups (157):', len(group)
-    print 'Field (1238):', len(field)
+    print('FOR')
+    print('Divisions (22): %d' % len(division))
+    print('Groups (157): %d' % len(group))
+    print('Field (1238): %d' % len(field))
 
     for div in division.items():
         createNode(g, FOR08, FOR08.FOR2, '%02d' % div[0], div[1], None)

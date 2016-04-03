@@ -87,26 +87,26 @@ def genseo08():
         if divcode not in division:
             division[divcode] = div
         elif division[divcode] != div:
-            print "WARNING division %d does not exist" % divcode
+            print("WARNING division %d does not exist" % divcode)
 
         grcode = int(code[:4])
         if grcode not in group:
             group[grcode] = gr
         elif group[grcode] != gr:
-            print "WARNING group %d does not exist" % grcode
+            print("WARNING group %d does not exist" % grcode)
 
         obcode = int(code)
         if obcode not in objective:
             objective[obcode] = obj
         elif objective[obcode] != obj:
-            print "WARNING objective %d %s differs from %d %s" % (obcode,
-                                            objective[obcode], obcode, obj)
+            print("WARNING objective %d %s differs from %d %s"
+                  % (obcode, objective[obcode], obcode, obj))
 
-    print 'SEO 08'
-    print 'Sectors (5):', len(sector)
-    print 'Divisions (17):', len(division)
-    print 'Groups (119):', len(group)
-    print 'Objective (847):', len(objective)
+    print('SEO 08')
+    print('Sectors (5): %d' % len(sector))
+    print('Divisions (17) %d:' % len(division))
+    print('Groups (119) %d:' % len(group))
+    print('Objective (847): %d' % len(objective))
 
     # checkagainst mapping:
     seo98csv = csv.reader(open('anzsrc_data/seo08-seo98.csv'))
@@ -115,7 +115,7 @@ def genseo08():
     for row in seo98csv:
         try:
             if int(row[0]) not in objective:
-                print 'WARNING: missing code ', row
+                print('WARNING: missing code %s' % row)
         except ValueError:
             continue
 
