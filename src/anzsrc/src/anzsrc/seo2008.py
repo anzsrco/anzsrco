@@ -76,7 +76,7 @@ def genseo08():
            Literal(u'Class for SEO 2008 6 digit codes')))
 
     seo98csv = csv.reader(open('anzsrc_data/seo08.csv'))
-    seo98csv.next()
+    next(seo98csv)
 
     division = {}
     group = {}
@@ -111,7 +111,7 @@ def genseo08():
     # checkagainst mapping:
     seo98csv = csv.reader(open('anzsrc_data/seo08-seo98.csv'))
     for i in range(0, 5):
-        seo98csv.next()
+        next(seo98csv)
     for row in seo98csv:
         try:
             if int(row[0]) not in objective:

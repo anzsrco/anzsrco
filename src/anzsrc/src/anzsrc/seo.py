@@ -42,7 +42,7 @@ def genseomatches(g):
     """
     seo98csv = csv.reader(open('anzsrc_data/seo98-seo08.csv'))
     for i in range(0, 5):
-        seo98csv.next()
+        next(seo98csv)
 
     for s98, n98, s08, n98 in seo98csv:
         if not s98 or not s08:
@@ -59,7 +59,7 @@ def genseomatches(g):
 
     seo08csv = csv.reader(open('anzsrc_data/seo08-seo98.csv'))
     for i in range(0, 5):
-        seo08csv.next()
+        next(seo08csv)
 
     for s08, n08, s98, n08 in seo08csv:
         if not s08 or not s98:

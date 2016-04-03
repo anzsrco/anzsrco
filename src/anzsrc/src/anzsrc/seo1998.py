@@ -78,8 +78,8 @@ def genseo98():
 
     # read data from csv files
     seo98csv = csv.reader(open('anzsrc_data/seo98.csv'))
-    seo98csv.next()
-    seo98csv.next()
+    next(seo98csv)
+    next(seo98csv)
 
     subdivision = {}  # collect subdivision codes
     group = {}  # collect group codes
@@ -92,7 +92,7 @@ def genseo98():
 
     seo98csv = csv.reader(open('anzsrc_data/seo98-seo08.csv'))
     for i in range(0, 5):
-        seo98csv.next()
+        next(seo98csv)
 
     objective = {}  # collect SEO-6 codes in here
 
