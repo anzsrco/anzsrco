@@ -1,5 +1,9 @@
+import sys
+
 from datetime import date
 from rdflib import Namespace, Literal, URIRef, Graph
+
+PY3 = sys.version_info[0] == 3
 
 ANZSRC = Namespace(u'http://purl.org/asc/1297.0/')
 ANZSRCVIVO = Namespace("http://purl.org/asc/1297.0/vivo.rdf")
@@ -65,15 +69,17 @@ def createNode(g, ns, class_, code, name, broader):
     codeuri = ns.term(code)
     g.add((codeuri, RDF.type, OWL.Thing))
     g.add((codeuri, RDF.type, class_))
+    if not PY3:
+        name = name.decode('utf-8')
     if broader is not None:
         g.add((codeuri, SKOS.broader, ns.term(broader)))
         g.add((ns.term(broader), SKOS.narrower, codeuri))
     else:
         g.add((ns, SKOS.hasTopConcept, codeuri))
-    g.add((codeuri, RDFS.label, Literal(name.decode('utf-8'))))
+    g.add((codeuri, RDFS.label, Literal(name)))
     g.add((codeuri, ANZSRC.code, Literal(code)))
     g.add((codeuri, SKOS.inScheme, ns))
-    g.add((codeuri, SKOS.prefLabel, Literal(name.decode('utf-8'), lang=u"en")))
+    g.add((codeuri, SKOS.prefLabel, Literal(name, lang=u"en")))
 
 
 def setnamespaceprefixes(g):
