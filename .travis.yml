@@ -1,0 +1,30 @@
+language: python
+
+python:
+  - 2.7
+
+env:
+  - RDFLIB_VERSION=3.0.0
+  - RDFLIB_VERSION=3.1.0
+  - RDFLIB_VERSION=3.2.3
+  - RDFLIB_VERSION=3.4.0
+
+  - RDFLIB_VERSION=2.4.1
+  - RDFLIB_VERSION=4.2.1
+
+matrix:
+  allow_failures:
+    - env: RDFLIB_VERSION=2.4.1
+    - env: RDFLIB_VERSION=4.2.1
+
+install:
+  # The dependency ipython uses requirement markers that are not understood
+  # by setuptools 12.0.5 which is the current version in the default Travis-CI
+  # environment.
+  - pip install --upgrade setuptools
+  - pip install rdflib=="$RDFLIB_VERSION"
+  - python bootstrap.py
+  - ./bin/buildout
+
+script:
+  - ./bin/genanzsrc
