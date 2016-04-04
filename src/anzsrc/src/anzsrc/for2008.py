@@ -76,7 +76,7 @@ def genfor08():
     g.add((FOR08.code, RDFS.range, XSD.string))
 
     for98csv = csv.reader(open('anzsrc_data/for08.csv'))
-    for98csv.next()
+    next(for98csv)
 
     division = {}
     group = {}
@@ -103,11 +103,11 @@ def genfor08():
 
     # checkagainst mapping:
     for98csv = csv.reader(open('anzsrc_data/for08-rfcd.csv'))
-    for98csv.next()
-    for98csv.next()
-    for98csv.next()
-    for98csv.next()
-    for98csv.next()
+    next(for98csv)
+    next(for98csv)
+    next(for98csv)
+    next(for98csv)
+    next(for98csv)
     for row in for98csv:
         try:
             if int(row[0]) not in field:

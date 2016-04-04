@@ -40,7 +40,7 @@ def genformatches(g):
     """
     forcsv = csv.reader(open('anzsrc_data/rfcd-for08.csv'))
     for i in range(0, 5):
-        forcsv.next()
+        next(forcsv)
 
     for f98, n98, f08, n08 in forcsv:
         if not f98 or not f08:
@@ -57,7 +57,7 @@ def genformatches(g):
 
     forcsv = csv.reader(open('anzsrc_data/for08-rfcd.csv'))
     for i in range(0, 5):
-        forcsv.next()
+        next(forcsv)
 
     # narrow match is being used as partial match.
     # TODO: consider defining a partial match property

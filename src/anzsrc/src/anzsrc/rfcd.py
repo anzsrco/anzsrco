@@ -69,8 +69,8 @@ def genrfcd():
 
     # read data from csv files
     rfcdcsv = csv.reader(open('anzsrc_data/rfcd.csv'))
-    rfcdcsv.next()
-    rfcdcsv.next()  # skip file header
+    next(rfcdcsv)
+    next(rfcdcsv)  # skip file header
 
     division = {}  # collect divisions here
     discipline = {}  # collect discplines here
@@ -82,7 +82,7 @@ def genrfcd():
 
     rfcdcsv = csv.reader(open('anzsrc_data/rfcd-for08.csv'))
     for i in range(0, 5):
-        rfcdcsv.next()
+        next(rfcdcsv)
 
     subject = {}  # collect RFCD-6 codes in here
     # check if all data exists and collect objective codes
