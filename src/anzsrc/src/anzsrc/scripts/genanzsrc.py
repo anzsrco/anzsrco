@@ -10,10 +10,10 @@ OUTPUT_DIR = "anzsrc_output"
 def genoutput(gengraph, fname, base):
     g = gengraph()
     setnamespaceprefixes(g)
-    f = open(OUTPUT_DIR + "/" + fname + '.rdf', 'w')
+    f = open(OUTPUT_DIR + "/" + fname + '.rdf', 'wb')
     g.serialize(f, format='xml')
     f.close()
-    f = open(OUTPUT_DIR + "/" + fname + '.n3', 'w')
+    f = open(OUTPUT_DIR + "/" + fname + '.n3', 'wb')
     g.serialize(f, format='n3')
     f.close()
 
@@ -45,6 +45,6 @@ def main():
     fref = URIRef(ANZSRCVIVO)
     ontoannot(g, fref)
     addvivo(g)
-    f = open(OUTPUT_DIR + '/anzsrc_vivo.rdf', 'w')
+    f = open(OUTPUT_DIR + '/anzsrc_vivo.rdf', 'wb')
     g.serialize(f)
     f.close()
