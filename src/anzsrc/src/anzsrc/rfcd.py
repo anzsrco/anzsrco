@@ -115,7 +115,7 @@ def genrfcd():
         rfcdcode = RFCD.term(code)
         g.add((rfcdcode, RDF.type, RFCD.RFCD2))
         g.add((rfcdcode, RDF.type, OWL.Thing))
-        g.add((rfcdcode, RDFS.label, Literal(unicode(name))))
+        g.add((rfcdcode, RDFS.label, Literal(name)))
         g.add((rfcdcode, ANZSRC.code, Literal(code)))
 
     for div in division.items():
