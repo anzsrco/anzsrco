@@ -1,5 +1,5 @@
 import csv
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from anzsrc import (FOR, RFCD, FOR08, VIVO, RDF, OWL, RDFS, SKOS, ANZSRC,
                     ontoannot, ontoversion, add_matchingproperties)
 
@@ -11,9 +11,9 @@ def genfor():
     This ontology combines RFCD and FOR and defines their relations
     """
     g = Graph()
-    g.add((FOR, RDF.type, OWL.Ontology))
-    g.add((FOR, RDFS.label, Literal(u'FOR Ontology')))
-    g.add((FOR, RDFS.comment, Literal(u'An ontology that provides some base '
+    g.add((URIRef(FOR), RDF.type, OWL.Ontology))
+    g.add((URIRef(FOR), RDFS.label, Literal(u'FOR Ontology')))
+    g.add((URIRef(FOR), RDFS.comment, Literal(u'An ontology that provides some base '
                                       u'definitions for RFCD 1998 and '
                                       u'FOR 2008 ontologies.')))
     ontoannot(g, FOR)

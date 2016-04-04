@@ -32,11 +32,15 @@ def ontoversion(g, ns):
     # dcterms:hasVersion ponits to another version of the same thing.
     # owl:versionInfo is an annotation property. (might be used to describe
     # changes)
-    g.add((ns, OWL.versionInfo, ns.term(u'0.2')))
-    g.add((ns, OWL.priorVersion, ns.term(u'0.1')))
+    ns_node = URIRef(ns)
+    if not isinstance(ns, Namespace):
+        ns = Namespace(ns)
+
+    g.add((ns_node, OWL.versionInfo, ns.term(u'0.2')))
+    g.add((ns_node, OWL.priorVersion, ns.term(u'0.1')))
     # g.add((ns, DCTERMS.hasVersion, ns + u'/0.2'))
     # duplicate the node ns with correct versioned URI
-    for (s, p, o) in g.triples((ns, None, None)):
+    for (s, p, o) in g.triples((ns_node, None, None)):
         g.add((ns.term(u'0.2'), p, o))
 
 
@@ -44,6 +48,9 @@ def ontoannot(g, ns):
     """
     add dc annotations to ontology.
     """
+    if not isinstance(ns, URIRef):
+        ns = URIRef(ns)
+
     g.add((ns, DC.creator, Literal(u'Griffith University')))
     g.add((ns, DC.creator, Literal(u'University of Southern Queensland')))
     g.add((ns, DC.date, Literal(date.today().isoformat())))
@@ -69,10 +76,10 @@ def createNode(g, ns, class_, code, name, broader):
         g.add((codeuri, SKOS.broader, ns.term(broader)))
         g.add((ns.term(broader), SKOS.narrower, codeuri))
     else:
-        g.add((ns, SKOS.hasTopConcept, codeuri))
+        g.add((URIRef(ns), SKOS.hasTopConcept, codeuri))
     g.add((codeuri, RDFS.label, Literal(name.decode('utf-8'))))
     g.add((codeuri, ANZSRC.code, Literal(code)))
-    g.add((codeuri, SKOS.inScheme, ns))
+    g.add((codeuri, SKOS.inScheme, URIRef(ns)))
     g.add((codeuri, SKOS.prefLabel, Literal(name.decode('utf-8'), lang=u"en")))
 
 
@@ -96,9 +103,9 @@ def setnamespaceprefixes(g):
 def genanzsrc():
     g = Graph()
 
-    g.add((ANZSRC, RDF.type, OWL.Ontology))
-    g.add((ANZSRC, RDFS.label, Literal(u'ANZSRC Base Ontology')))
-    g.add((ANZSRC, RDFS.comment,
+    g.add((URIRef(ANZSRC), RDF.type, OWL.Ontology))
+    g.add((URIRef(ANZSRC), RDFS.label, Literal(u'ANZSRC Base Ontology')))
+    g.add((URIRef(ANZSRC), RDFS.comment,
            Literal(u'An ontology that provides some base definitions for '
                    u'commonly used by all FOR, RFCD, SEO, etc. '
                    u'ontologies.')))
