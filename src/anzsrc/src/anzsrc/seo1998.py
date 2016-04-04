@@ -1,5 +1,5 @@
 import csv
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from anzsrc import (SEO98, SKOS, RDF, OWL, RDFS, ANZSRC, DC,
                     ontoannot, ontoversion, createNode)
 
@@ -28,17 +28,17 @@ def genseo98():
     generate SEO 1998 ontology. seo98.owl
     """
     g = Graph()
-    g.add((SEO98, RDF.type, OWL.Ontology))
-    g.add((SEO98, RDF.type, SKOS.ConceptScheme))
-    g.add((SEO98, RDFS.label, Literal(u'SEO 1998 Ontology')))
-    g.add((SEO98, RDFS.comment, Literal(u'An ontology that provides classes '
+    g.add((URIRef(SEO98), RDF.type, OWL.Ontology))
+    g.add((URIRef(SEO98), RDF.type, SKOS.ConceptScheme))
+    g.add((URIRef(SEO98), RDFS.label, Literal(u'SEO 1998 Ontology')))
+    g.add((URIRef(SEO98), RDFS.comment, Literal(u'An ontology that provides classes '
                                         u'codes and hierarchical information '
                                         u'about SEO 1998 codes.')))
-    g.add((SEO98, DC.title, Literal(u"Australian Standard Research "
+    g.add((URIRef(SEO98), DC.title, Literal(u"Australian Standard Research "
                                     u"Classification (ASRC): "
                                     u"Socio-Economic Objective Classification",
                                     lang=u"en")))
-    g.add((SEO98, DC.description, Literal(u"The SEO Classification allows R&D "
+    g.add((URIRef(SEO98), DC.description, Literal(u"The SEO Classification allows R&D "
             u"data to be classified according to the researcher's perceived "
             u"purpose. The purpose categories take account of processes, "
             u"products, health, education and other social and environmental "

@@ -1,5 +1,5 @@
 import csv
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from anzsrc import (RFCD, SKOS, RDF, OWL, RDFS, ANZSRC, DC,
                     ontoannot, ontoversion, createNode)
 
@@ -21,17 +21,17 @@ def genrfcd():
     '''
     # generate class definitions
     g = Graph()
-    g.add((RFCD, RDF.type, OWL.Ontology))
-    g.add((RFCD, RDF.type, SKOS.ConceptScheme))
-    g.add((RFCD, RDFS.label, Literal(u'RFCD 1998 Ontology')))
-    g.add((RFCD, RDFS.comment, Literal(u'An ontology that provides classes '
+    g.add((URIRef(RFCD), RDF.type, OWL.Ontology))
+    g.add((URIRef(RFCD), RDF.type, SKOS.ConceptScheme))
+    g.add((URIRef(RFCD), RDFS.label, Literal(u'RFCD 1998 Ontology')))
+    g.add((URIRef(RFCD), RDFS.comment, Literal(u'An ontology that provides classes '
                                       u'codes and hierarchical information '
                                       u'about RFCD 1998 codes.')))
-    g.add((RFCD, DC.title, Literal(u"Australian Standard Research "
+    g.add((URIRef(RFCD), DC.title, Literal(u"Australian Standard Research "
                                    u"Classification (ASRC): "
                                    u"Research Fields, Courses and Disciplines "
                                    u"Classification", lang=u"en")))
-    g.add((RFCD, DC.description, Literal(u"This classification allows both R&D"
+    g.add((URIRef(RFCD), DC.description, Literal(u"This classification allows both R&D"
             u" activity and other activity within the higher education sector "
             u"to be categorised."
             u"\n"

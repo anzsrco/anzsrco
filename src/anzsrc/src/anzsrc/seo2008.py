@@ -1,5 +1,5 @@
 import csv
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from anzsrc import (SEO08, SKOS, RDF, OWL, RDFS, DC,
                     ontoannot, ontoversion, createNode)
 
@@ -24,16 +24,16 @@ def genseo08():
     generate SEO 2008 ontology. seo08.owl
     """
     g = Graph()
-    g.add((SEO08, RDF.type, OWL.Ontology))
-    g.add((SEO08, RDF.type, SKOS.ConceptScheme))
-    g.add((SEO08, RDFS.label, Literal(u'SEO 2008 Ontology')))
-    g.add((SEO08, RDFS.comment, Literal(u'An ontology that provides classes '
+    g.add((URIRef(SEO08), RDF.type, OWL.Ontology))
+    g.add((URIRef(SEO08), RDF.type, SKOS.ConceptScheme))
+    g.add((URIRef(SEO08), RDFS.label, Literal(u'SEO 2008 Ontology')))
+    g.add((URIRef(SEO08), RDFS.comment, Literal(u'An ontology that provides classes '
                                         u'codes and hierarchical information '
                                         u'about SEO 2008 codes.')))
-    g.add((SEO08, DC.title, Literal(u"Australian and New Zealand Standard "
+    g.add((URIRef(SEO08), DC.title, Literal(u"Australian and New Zealand Standard "
                                     u"Research Classification (ANZSRC): "
                                     u"Socio-Economic Objective.", lang=u"en")))
-    g.add((SEO08, DC.description, Literal(u"The ANZSRC SEO classification "
+    g.add((URIRef(SEO08), DC.description, Literal(u"The ANZSRC SEO classification "
             u"allows R&D activity in Australia and New Zealand to be "
             u"categorised according to the intended purpose or outcome of the "
             u"research, rather than the processes or techniques used in order "

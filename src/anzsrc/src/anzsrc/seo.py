@@ -1,5 +1,5 @@
 import csv
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from anzsrc import (SEO, SEO98, SEO08, RDF, OWL, RDFS, VIVO, SKOS, ANZSRC,
                     ontoannot, ontoversion, add_matchingproperties)
 
@@ -13,9 +13,9 @@ def genseo():
     TODO: add owl:versionInfo
     """
     g = Graph()
-    g.add((SEO, RDF.type, OWL.Ontology))
-    g.add((SEO, RDFS.label, Literal(u'SEO Ontology')))
-    g.add((SEO, RDFS.comment, Literal(u'An ontology that provides some base '
+    g.add((URIRef(SEO), RDF.type, OWL.Ontology))
+    g.add((URIRef(SEO), RDFS.label, Literal(u'SEO Ontology')))
+    g.add((URIRef(SEO), RDFS.comment, Literal(u'An ontology that provides some base '
                                      u'definitions for SEO 1998 and SEO 2008 '
                                      u'ontologies.')))
     ontoannot(g, SEO)
