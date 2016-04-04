@@ -102,26 +102,26 @@ def genseo98():
             continue
         subdivcode = int(s98[:2])
         if subdivcode not in subdivision:
-            print "WARNING division %d does net exist" % subdivcode
+            print("WARNING division %d does net exist" % subdivcode)
 
         grcode = int(s98[:4])
         if grcode not in group:
-            print "WARNING group %d does not exist" % grcode
+            print("WARNING group %d does not exist" % grcode)
 
         obcode = int(s98)
         if obcode not in objective:
             objective[obcode] = n98
         elif objective[obcode] != n98:
-            print "WARNING objective %d %s differs from %d %s" % (obcode,
-                                            objective[obcode], obcode, n98)
+            print("WARNING objective %d %s differs from %d %s"
+                  % (obcode, objective[obcode], obcode, n98))
 
     # print summary and build instances
-    print 'SEO 98'
+    print('SEO 98')
     # from seo98.pdf: 5 divisions, 18 subdivisions, 107 groups and 594 classes
-    print 'Divisions (5):', len(division)
-    print 'Subdivisions (18): ', len(subdivision)
-    print 'Groups (107):', len(group)
-    print 'Objective (594):', len(objective)
+    print('Divisions (5): %d' % len(division))
+    print('Subdivisions (18): %d' % len(subdivision))
+    print('Groups (107): %d' % len(group))
+    print('Objective (594): %d' % len(objective))
 
     for div in division.items():
         createNode(g, SEO98, SEO98.SEODivision, div[0], div[1], None)

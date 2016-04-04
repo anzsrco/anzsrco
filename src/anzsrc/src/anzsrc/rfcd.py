@@ -91,25 +91,25 @@ def genrfcd():
             continue
         divcode = int(f98[:2])
         if divcode not in division:
-            print "WARNING division %d does net exist" % divcode
+            print("WARNING division %d does net exist" % divcode)
 
         disccode = int(f98[:4])
         if disccode not in discipline:
-            print "WARNING discipline %d does not exist" % disccode
+            print("WARNING discipline %d does not exist" % disccode)
 
         subjcode = int(f98)
         if subjcode not in subject:
             subject[subjcode] = n98
         elif subject[subjcode] != n98:
-            print "WARNING subject %d %s differs from %d %s" % (subjcode,
-                                        subject[subjcode], subjcode, n98)
+            print("WARNING subject %d %s differs from %d %s"
+                  % (subjcode, subject[subjcode], subjcode, n98))
 
     # All data read, print out a summary and start creating instances
-    print 'RFCD 98'
+    print('RFCD 98')
     # from 12970_98.pdf: 24 divisions, 139 disciplines, 898 subjects
-    print 'Divisions (24):', len(division)
-    print 'Disciplines (139):', len(discipline)
-    print 'Subjects (898):', len(subject)
+    print('Divisions (24): %d' % len(division))
+    print('Disciplines (139): %d' % len(discipline))
+    print('Subjects (898): %d' % len(subject))
 
     def createDivision(code, name):
         rfcdcode = RFCD.term(code)
